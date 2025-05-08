@@ -38,7 +38,7 @@ def fetch_to_telegram(message):
     else:
         print(f"連接Telegram失敗，狀態碼{response.status_code}")
 
-def search_to_abmedia(pages=2):
+def search_to_abmedia(pages=4):
     headers ={
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
     }
@@ -70,11 +70,12 @@ def search_to_abmedia(pages=2):
                     if not href.startswith("http"):
                         href = base_url+ href
                     articles.append((title,href))
-
-            return articles
+    
 
         else:
             print(f"查詢網頁失敗,狀態碼{response.status_code}")
+
+    return articles
 
 
 async def send_to_message(update:Update,context:ContextTypes.DEFAULT_TYPE):
