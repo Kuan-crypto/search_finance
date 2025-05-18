@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+
+# 虛擬環境資料夾
+venv/
+env/
+
+# 設定檔、憑證檔
+config/setting.py
+
+# 圖片、暫存檔
+*.jpg
+*.jpeg
+
+# 環境變數檔
+*.env
