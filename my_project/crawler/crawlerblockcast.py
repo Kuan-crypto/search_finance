@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
+
 def fetch_to_blockcast(click_time=3,time_sleep=5):
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
@@ -19,13 +20,13 @@ def fetch_to_blockcast(click_time=3,time_sleep=5):
         load_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[5]/div/div[1]/div/div/section[2]/div/div/div/div/div/div/div[2]/div[2]/a")))
     
-    driver.execute_script("arguments[0].scrollIntoView(true);", load_button)
+        driver.execute_script("arguments[0].scrollIntoView(true);", load_button)
     
-    time.sleep(1)
+        time.sleep(1)
     
-    driver.execute_script("arguments[0].click();", load_button)
+        driver.execute_script("arguments[0].click();", load_button)
     
-    time.sleep(5)
+        time.sleep(5)
 
     articles=[]
 
@@ -40,7 +41,12 @@ def fetch_to_blockcast(click_time=3,time_sleep=5):
 
         title = title_tag.text
         href = link_tag.get_attribute("href")
+        
+        articles.append({title:title,href:href})
 
 
     driver.quit()
     return articles
+
+if __name__ == "__main__":
+    fetch_to_blockcast()

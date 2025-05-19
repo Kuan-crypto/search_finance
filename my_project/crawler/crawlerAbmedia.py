@@ -10,6 +10,8 @@ def fetch_to_abmedia():
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
     }
 
+    articles = []
+
     keywords = [
         "比特幣",
         "以太幣",
@@ -19,9 +21,7 @@ def fetch_to_abmedia():
         "near"
     ]
 
-    articles = []
-
-    pages =4
+    pages =2
     for page in range(1, pages + 1):
         url = f"https://abmedia.io/blog/page/{page}"
 

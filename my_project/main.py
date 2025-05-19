@@ -2,9 +2,9 @@ from telegram import Update
 from telegram.ext import Application , CommandHandler , ContextTypes
 from config import setting
 from K_line.search_eth_Kline import fetch_to_eth
-from app.crawlerAbmedia import fetch_to_abmedia
-from app.crawlerblockcast import fetch_to_blockcast
-from app.crawlercoingraph import fetch_to_coingraph
+from crawler.crawlerAbmedia import fetch_to_abmedia
+from crawler.crawlerblockcast import fetch_to_blockcast
+from crawler.crawlercoingraph import fetch_to_coingraph
 from K_line.search_near_Kline import fetch_to_near
 
 token = setting.TOKEN
@@ -27,8 +27,8 @@ async def search_near(update,context):
 async def search_abmedia(update,context):
    
     results =fetch_to_abmedia()
+
     if results:
-        
         message = (f"📰<b>crypto news熱門關鍵字文章：</b>\n\n")
 
         for title , href in results:
@@ -41,7 +41,7 @@ async def search_abmedia(update,context):
 #爬蟲blockcast
 async def search_blockcast(update:Update,context:ContextTypes.DEFAULT_TYPE):
     
-    results = fetch_to_blockcast(click_time=3)
+    results = fetch_to_blockcast()
     if results:
         message = (f"📰<b>crypto news熱門關鍵字文章：</b>\n\n")
 
