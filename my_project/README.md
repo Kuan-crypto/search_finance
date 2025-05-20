@@ -13,4 +13,4 @@
 能夠在上班以及大庭廣眾下瀏覽最新資訊。
 新聞稿內容網址包含：鏈新聞、coingraph、區塊客
 
-[freqtrade](https://github.com/Kuan-crypto/search_finance/blob/main/my_project/images/kline.png)
+![freqtrade](https://github.com/Kuan-crypto/search_finance/blob/main/my_project/images/kline.png)
