@@ -43,6 +43,7 @@ async def search_blockcast(update:Update,context:ContextTypes.DEFAULT_TYPE):
     
     results = fetch_to_blockcast()
     if results:
+        print("bot在運作中...")
         message = (f"📰<b>crypto news熱門關鍵字文章：</b>\n\n")
 
         for title , href in results:
