@@ -7,9 +7,10 @@
 但我會經過每日的學習上傳我的成果並分享給大家。
 
 
-## What am i do ?
+## What am i doing ?
 
 使用telegram bot機器人快速獲取最新新聞內容以及關注特定加密貨幣幣種的實時1H K線圖，
 能夠在上班以及大庭廣眾下瀏覽最新資訊。
 新聞稿內容網址包含：鏈新聞、coingraph、區塊客
 
+https://github.com/Kuan-crypto/search_finance/blob/main/my_project/images/kline.png
